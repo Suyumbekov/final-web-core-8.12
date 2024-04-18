@@ -22,6 +22,7 @@
   @media only screen and (min-width: 1440px) {
     position: static;
     box-shadow: none;
+    overflow-y: hidden;
   }
 
   &__header {
