@@ -1,0 +1,178 @@
+.prices {
+  font-size: 14px;
+  margin-bottom: 57px;
+  box-sizing: border-box;
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 24px;
+  }
+
+  @media only screen and (min-width: 1366px) {
+    padding: 0 32px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    color: $nav-text;
+    margin-bottom: 16px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 320px) {
+      display: none;
+    }
+
+    div:last-child {
+      width: 119px;
+    }
+  }
+
+  &__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: $main-text;
+    padding: 0 16px;
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 16px 0;
+
+    &:not(&:last-child) {
+      border-bottom: 1px solid $borderColor;
+    }
+  }
+  &__title {
+    width: 348px;
+
+    @media only screen and (max-width: 320px) {
+      width: auto;
+      &::before {
+        content: 'Ремонтные услуги';
+        display: block;
+        flex-direction: column;
+        margin-bottom: 4px;
+        color: $nav-text;
+      }
+    }
+  }
+
+  &__price {
+    width: 74px;
+
+    @media only screen and (max-width: 320px) {
+      &::before {
+        content: 'Цена';
+        display: block;
+        margin-bottom: 4px;
+        color: $nav-text;
+      }
+    }
+  }
+
+  &__time {
+    width: 81px;
+
+    @media only screen and (max-width: 320px) {
+      &::before {
+        content: 'Срок';
+        display: block;
+        margin-bottom: 4px;
+        color: $nav-text;
+      }
+    }
+  }
+  &__btn {
+    width: 119px;
+    height: 32px;
+    font-weight: bold;
+    color: #fff;
+    background-color: $book-btn;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+
+    @media only screen and (max-width: 320px) {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+    }
+
+    @media only screen and (min-width: 321px) and (max-width: 380px) {
+      width: 100px;
+    }
+
+    &:hover {
+      background-color: lighten($book-btn, 10%);
+      cursor: pointer;
+    }
+  }
+
+  &__info {
+    max-width: 421px;
+    font-size: 14px;
+    // padding: 0 32px;
+    color: $main-text;
+
+    @media only screen and (max-width: 320px) {
+      width: 288px;
+    }
+    @media only screen and (max-width: 768px) {
+      padding: 0 16px;
+    }
+  }
+
+  &__txt {
+    margin-bottom: 16px;
+    line-height: 20px;
+  }
+
+  &__order {
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    background: none;
+    text-align: left;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    > img {
+      margin-left: 10px;
+    }
+  }
+  .swiper-wrapper {
+    @media only screen and (max-width: 320px) {
+      display: flex;
+      flex-direction: row;
+      background: none;
+    }
+
+    .swiper-slide {
+      @media only screen and (max-width: 320px) {
+        max-width: 260px;
+        height: 200px;
+        margin-left: 35px;
+        background-color: #fff;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px;
+        border-radius: 6px;
+      }
+    }
+  }
+  .prices__pagination {
+    text-align: center;
+  }
+}

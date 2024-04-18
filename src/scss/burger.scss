@@ -1,0 +1,142 @@
+/* burger menu */
+.burger {
+  width: 320px;
+  padding: 10px 24px;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+  display: flex;
+  position: fixed;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  color: $main-text;
+  font-weight: 500;
+  z-index: 10;
+  overflow-y: scroll;
+
+  @media only screen and (max-width: 1439px) {
+    display: none;
+    padding-top: 30px;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    position: static;
+    box-shadow: none;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 46px;
+
+    @media only screen and (min-width: 1440px) {
+      justify-content: space-between;
+
+      .burger__btn:first-child {
+        display: none;
+      }
+    }
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    background-color: $book-btn;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 12px;
+    margin-right: 10px;
+    transition: opacity 0.2s;
+
+    &:hover:not(&--logo) {
+      background-color: lighten($book-btn, 10%);
+      cursor: pointer;
+    }
+  }
+
+  &__btn--logo {
+    width: 97px;
+    height: 51px;
+    padding-top: 0;
+    margin-right: 62px;
+    background-color: white;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 18px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 268px;
+
+    @media only screen and (max-width: 360px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+    color: $main-text;
+    margin-bottom: 32px;
+
+    &:hover {
+      color: $nav-text;
+      cursor: pointer;
+    }
+
+    &--active {
+      height: 32px;
+      color: $nav-text;
+      border: 4px solid white;
+      border-left: 4px solid $callBorder;
+      padding-left: 20px;
+      margin-left: -24px;
+    }
+  }
+
+  &__pic {
+    display: flex;
+  }
+
+  &__email {
+    font-size: 16px;
+  }
+
+  &__number {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: $main-text;
+  }
+
+  &__langs {
+    margin-bottom: 32px;
+  }
+  &__lang {
+    font-size: 16px;
+    color: $main-text;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__lang--select {
+    color: $nav-text;
+  }
+}
+
+.wrapper {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #ffffff;
+  opacity: 0.96;
+  z-index: 5;
+}
+
+.active {
+  display: flex;
+}

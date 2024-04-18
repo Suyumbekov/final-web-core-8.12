@@ -1,0 +1,56 @@
+.footer {
+  color: $nav-text;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 360px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: 0 16px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 24px;
+  }
+
+  @media only screen and (min-width: 1366px) {
+    padding: 0 34px;
+  }
+
+  &__item {
+    width: 218px;
+    text-align: center;
+
+    &:first-child {
+      text-align: left;
+    }
+    &:last-child {
+      text-align: right;
+    }
+
+    @media only screen and (max-width: 360px) {
+      width: 312px;
+      margin-bottom: 16px;
+
+      &:first-child {
+        text-align: center;
+      }
+      &:last-child {
+        text-align: center;
+      }
+    }
+
+    @media only screen and (max-width: 700px) {
+      width: 200px;
+    }
+  }
+
+  &__year {
+    display: block;
+  }
+}
